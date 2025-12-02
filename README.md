@@ -1,7 +1,7 @@
 # 🚀 Mini Redis - High-Performance In-Memory Cache Server
 
 [![Rust](https://img.shields.io/badge/rust-1.70%2B-orange.svg)](https://www.rust-lang.org/)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 [![Tests](https://img.shields.io/badge/tests-89%20passing-green.svg)]()
 
 A lightweight, high-performance in-memory cache server implemented in Rust. Features TTL expiration, LRU eviction, and a clean REST API — like a tiny Redis for your microservices.
@@ -418,12 +418,6 @@ AppState {
 - `Arc` enables shared ownership across async tasks
 - `RwLock` allows multiple readers OR single writer
 - Handlers acquire appropriate lock based on operation
-
----
-
-## 📄 License
-
-MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
