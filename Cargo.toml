@@ -1,0 +1,43 @@
+[package]
+name = "mini_redis"
+version = "0.1.0"
+edition = "2021"
+description = "A lightweight in-memory cache server with TTL and LRU eviction"
+authors = ["Charles Leroy"]
+
+[lib]
+name = "mini_redis"
+path = "src/lib.rs"
+
+[[bin]]
+name = "mini_redis"
+path = "src/main.rs"
+
+[dependencies]
+# Async runtime
+tokio = { version = "1.40", features = ["full"] }
+
+# HTTP framework
+axum = "0.7"
+tower-http = { version = "0.5", features = ["cors", "trace"] }
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+# Error handling
+thiserror = "1.0"
+anyhow = "1.0"
+
+# Time handling
+chrono = { version = "0.4", features = ["serde"] }
+
+[dev-dependencies]
+tokio-test = "0.4"
+reqwest = { version = "0.12", features = ["json"] }
+proptest = "1.5"
+tower = { version = "0.5", features = ["util"] }
